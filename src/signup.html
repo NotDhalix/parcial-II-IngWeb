@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../components/style.css">
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+    <title>Registro de usuario</title>
+</head>
+<body>
+
+    <form method="post" class="form_signup" action="../PHP/signup.php">
+
+        <h2 class="form_title">Registrate</h2>
+        <p class="signup_text">Si ya tienes cuenta, <a href="login.html" class="signup_link"><u>inicia sesión</u></a></p>
+
+    <div class="form_container">
+
+        <div class="form_group">
+            <input type="text" id="nombre" placeholder=" " name="nombre" class="form_input" required>
+            <label for="nombre" class="form_label">Nombre</label>
+            <span class="form_line"></span>
+        </div>
+        <div class="form_group">
+            <input type="text" id="apellido" name="apellido" placeholder=" " class="form_input" required>
+            <label for="apellido" class="form_label">Apellido</label>
+            <span class="form_line"></span>
+        </div>
+        <div class="form_group">
+            <input type="text" id="email" name="email" placeholder=" " class="form_input" required>
+            <label for="email" class="form_label">Correo electrónico</label>
+            <span class="form_line"></span>
+        </div>
+        <div class="form_group">
+            <input type="text" id="username" name="username" placeholder=" " class="form_input" required>
+            <label for="username" class="form_label">Nombre de usuario</label>
+            <span class="form_line"></span>
+        </div>
+        <div class="form_group">
+            <input type="password" id="password" name="password" placeholder=" " class="form_input" required>
+            <label for="password" class="form_label">Contraseña</label>
+            <span class="form_line"></span>
+        </div>
+        <div class="form_group">
+            <input type="password" id="cpassword" name="cpassword" placeholder=" " class="form_input" required>
+            <label for="cpassword" class="form_label">Confirmar contraseña</label>
+            <span class="form_line"></span>
+        </div>
+
+        <input type="submit" class="form_submit" value="Entrar">
+        <a class="return_index" href="../index.html">Volver al inicio</a>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,399 @@
+@font-face {
+    font-family: wanted;
+    src: url(Wanted\ M54.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+/*Reset CSS*/
+
+*{
+    box-sizing: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Imagen de fondo para todas las paginas */
+
+body{
+    background: url('../images/background.jpg') center center fixed;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    font-family: 'Karla', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/background.jpg') center center fixed;
+    background-size: cover;
+    z-index: -1; 
+    font-family: 'Karla', sans-serif;
+}
+
+
+/* Index.php  y team.php*/
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 270px;   
+    height: 250px;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: all 130ms linear;
+    box-sizing: border-box;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card h3{
+    font-weight: lighter;
+    font-family: wanted;
+    text-align: center;   
+}
+
+.card p{
+    text-align: center;
+    margin-top: auto;
+    display: block;
+    padding: 8px;
+    border-radius: 0 0 15px 15px;
+    background: linear-gradient(0.25turn, rgb(65, 65, 65), rgb(100,100,100), rgb(65, 65, 65));
+    color: white;
+}
+
+.card-image{
+    height: 150px;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    padding-bottom:15px;
+    padding-top: 15px;
+}
+h2{
+    color: white;
+    text-align: center;
+    font-weight: 200;
+    padding-top: 5px;
+}
+
+/* CSS para las esatdisticas de los equipos */
+
+.team-stats {
+    overflow: hidden;
+    margin: 10px 0px 10px 0px;
+}
+
+.team-stats ul{
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    justify-content: center;
+}
+
+.team-stats ul li{
+    margin: 20px 45px 20px 45px;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 3vh;
+    margin-left: 10px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s linear all;
+}
+
+.team-stats .wins{
+    background-color: rgb(0, 160, 0);
+}
+.team-stats .ties{
+    background-color: rgb(138, 138, 138);
+}
+.team-stats .loses{
+    background-color: crimson;
+}
+
+.title_container{
+    background-color: rgba(0, 0, 0, 0.60);
+    padding: 1px 20px;
+    margin: 0 400px;
+    border-radius: 5px;
+}
+
+/* CSS Forms */
+.form {
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form_signup{
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.form_team{
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.form_player{
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.form_game{
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form_title{
+    font-size: 2rem;
+    margin-bottom: .5em;
+    color: black;
+
+}
+
+.signup_text{
+    font-weight: 300;
+
+}
+
+.signup_link{
+    font-weight: 400;
+    color: black;
+}
+
+.form_container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+
+}
+
+.form_group{
+    position: relative;
+    --color: #5757577e;
+
+}
+
+.form_input{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+}
+
+.form_input:focus + .form_label, .form_input:not(:placeholder-shown) + .form_label{
+    transform: translateY(-12px) scale(0.7);
+    transform-origin: left top;
+    color: #3866f2;
+}
+
+.form_input:focus, .form_input:not(:placeholder-shown) ~ .form_line{
+    color: #4d6464;
+}
+
+.form_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+
+.form_submit{
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+
+.form_line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #3866f2;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+
+.form_input:focus ~ .form_line, .form_input:not(:placeholder-shown) ~ .form_line{
+    transform: scale(1);
+}
+
+.form_submit:hover{
+    cursor: pointer;
+}
+
+
+
+
+/* Este switch lo encontre en W3School. Creditos: https://www.w3schools.com/howto/howto_css_switch.asp */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* CSS de las estadisticas generales */
+
+  .graph{
+    width: 600px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .graph-container{
+    width: 100%;
+    background-color: #ddd;
+  }
+
+  .num{
+    text-align: right;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+  }
